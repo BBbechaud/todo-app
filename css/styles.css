@@ -11,32 +11,44 @@
     --color-accent-1: #0099cc;
     --color-accent-2: #e65c00;
 
+    --color-checked: #555;
+}
 
+body {
+    background-color: #f2f2f2;
 }
 
 .content-container {
     margin: 2rem auto;
-   
-    border: 1px solid black;
     max-width: 34rem;
+    
 }
 
 .title-and-toggle {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 4.5rem;
+    margin-left: 3.3rem;
 }
 
 .todo-app {
     background-color: var(--color-light);
+    height: 500px;
+    box-shadow: 1px 1px 10px 1px #00000089;
+    border-radius: 20px;
+   overflow: auto;
 }
 
 .add-task {
     display: flex;
     justify-content: space-between;
     max-width: 30rem;
-    margin: 0 auto;
+    margin: 40px auto 20px;
     background-color: #f2f2f2;
     border-radius: 25px;
+   
 }
 
 #input-box {
@@ -46,7 +58,6 @@
     max-width: 84%;
     width: 84%;
     margin-left: 20px;
-    
 }
 
 .btn {
@@ -59,3 +70,33 @@
     color: var(--color-light);
 }
 
+ul li {
+    list-style: none;
+    padding: 20px 8px 12px 15%;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-image: url(../assests/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 34%;
+    left: 8%;
+}
+
+ul li.checked {
+    color: var(--color-checked);
+    text-decoration: line-through;
+    
+}
+
+ul li.checked::before {
+    background-image: url(../assests/checked.png)
+}
