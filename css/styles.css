@@ -5,34 +5,36 @@
 }
 
 :root {
-    --color-light: #ffffff;
-    --color-dark: #00001a;
+    --color-primary: #ffffff;
+    --color-secondary: #00001a;
 
-    --color-accent-1: #0099cc;
-    --color-accent-2: #ff5945;
+    --color-background: #3466cb;
+  
+    --color-accent: #ff5945;
+
+    --color-input: #d7d5d5;
 
     --color-checked: #555;
 }
 
-body {
-    background-image: url(../assests/daytime-mountain.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* height: 200px; */
-    background-origin: content-box;
-  
+.darkmode {
+    --color-primary: #00001a;
+    --color-secondary: #ffffff;
+    --color-background: #300214;
+    /* --color-input: #6c1a6c; */
+    background-image: url(../assests/darkmode-mountain.jpg)
 }
 
 body {
-    background-color: #f2f2f2;
-
+    background-image: url(../assests/lightmode-mountain.jpg);
+    background-position: center;
+    background-origin: content-box;
+    background-color: var(--color-background);
 }
 
 .content-container {
     margin: 2rem auto;
     max-width: 34rem;
-    
 }
 
 .title-and-toggle {
@@ -42,15 +44,25 @@ body {
     margin-bottom: 20px;
     margin-right: 4.5rem;
     margin-left: 3.3rem;
-    color: var(--color-light);
+    color: var(--color-primary);
+    text-shadow: 1px 1px var(--color-secondary);
+}
+
+#icon {
+    cursor: pointer;
+    color: var(--color-primary);
 }
 
 .todo-app {
-    background-color: var(--color-light);
+    background-color: var(--color-primary);
     height: 500px;
-    box-shadow: 1px 1px 10px 1px #00000089;
+    box-shadow: .5px .5px 20px .5px var(--color-secondary);
     border-radius: 20px;
-   overflow: auto;
+    overflow: auto;
+}
+
+.todo-app * {
+    color: var(--color-secondary);
 }
 
 .add-task {
@@ -58,9 +70,9 @@ body {
     justify-content: space-between;
     max-width: 30rem;
     margin: 40px auto 20px;
-    background-color: #f2f2f2;
+    background-color: var(--color-input);
     border-radius: 25px;
-   
+
 }
 
 #input-box {
@@ -70,16 +82,20 @@ body {
     max-width: 84%;
     width: 84%;
     margin-left: 20px;
+   
+}
+
+input[type="text"], input::placeholder {
+    color: #00001a;
 }
 
 .btn {
-    background-color: var(--color-accent-2);
+    background-color: var(--color-accent);
     padding: 15px 50px;
     border-radius: 25px;
     border: none;
     outline: none;
     cursor: pointer;
-    color: var(--color-light);
 }
 
 ul li {
