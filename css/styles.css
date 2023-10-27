@@ -21,7 +21,7 @@
     --color-primary: #00001a;
     --color-secondary: #ffffff;
     --color-background: #300214;
-    /* --color-input: #6c1a6c; */
+    --color-input: #b4b4b4;
     background-image: url(../assests/darkmode-mountain.jpg)
 }
 
@@ -55,13 +55,14 @@ body {
 
 .todo-app {
     background-color: var(--color-primary);
-    box-shadow: .5px .5px 20px .5px var(--color-secondary);
+    box-shadow: 0px 0px 30px -10px var(--color-secondary);
     border-radius: 20px;
     overflow: auto;
 }
 
 .todo-app * {
     color: var(--color-secondary);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .add-task {
@@ -81,11 +82,10 @@ body {
     max-width: 84%;
     width: 84%;
     margin-left: 20px;
-   
 }
 
 input[type="text"], input::placeholder {
-    color: #00001a;
+    color: var(--color-secondary);
 }
 
 .btn {
@@ -105,7 +105,7 @@ ul li {
     position: relative;
 }
 ul li:last-child {
-    padding-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 ul li::before {
@@ -138,12 +138,12 @@ ul li span {
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color: #555;
+    color: var(--color-checked);
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
 
 ul li span:hover {
-    background: #edeef0;
+    background: var(--color-input);
 }
